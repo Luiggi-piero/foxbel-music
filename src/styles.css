@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Titulos y botones*/
+    --red-principal: #E86060;
+    /* Color del texto principal en lista de video*/
+    --secondary-color: #555555;
+    /* Color del texto secundario en lista de video */
+    --gray: #828282;
+    /* Otros */
+    --dark-red-secondary: #662323;
+    --soft-gray: #BDBDBD;
+    --light-red: #FF7676;
+}
+
+html {
+    height: 100vh;
+}
+
+.wrap-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.wrap-main {
+    /*  */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.wrap-pages {
+    position: absolute;
+    /* top: 65px; */
+    right: 0;
+    width: 74.3%;
+    padding: 40px 40px 0 40px;
+    transition: 1s;
+}
+
+
+/* Responsive */
+
+@media (max-width: 1190px) {
+    .wrap-pages {
+        width: 100%;
+    }
+}

@@ -1,0 +1,155 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.wrap-detail {
+    display: flex;
+    width: 100%;
+    height: 250px;
+}
+
+.wrap-detail .wrap-image {
+    max-width: 250px;
+    height: 250px;
+}
+
+.wrap-detail .wrap-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wrap-detail .wrap-info {
+    width: 100%;
+    height: 250px;
+}
+
+.wrap-detail .wrap-info .content {
+    position: relative;
+    top: -234px;
+    z-index: 10;
+    padding: 0 21px 22px 30px;
+}
+
+.wrap-detail .wrap-info .wrap-background {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wrap-detail .wrap-info .wrap-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(167, 0, 0, 0.7), rgba(167, 0, 0, 0.7));
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.wrap-detail .wrap-info .wrap-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wrap-detail .wrap-info .title {
+    font-family: 'Quicksand', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    color: #FFFFFF;
+}
+
+.wrap-detail .wrap-info .statistics {
+    display: flex;
+    align-items: flex-end;
+}
+
+.wrap-detail .wrap-info .statistics .theBestOf {
+    margin-right: 16px;
+    font-family: 'Quicksand', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+
+.wrap-detail .wrap-info .statistics .followers {
+    font-family: 'Quicksand', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    color: var(--dark-red-secondary);
+}
+
+.wrap-detail .wrap-info .description {
+    padding: 20px 0 58px 0;
+    font-family: 'Quicksand', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+.wrap-detail .wrap-info .wrap-buttons button {
+    margin-right: 20px;
+    width: 117px;
+    height: 31px;
+    border-radius: 100px;
+    border: none;
+    font-family: 'Quicksand', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.wrap-detail .wrap-info .wrap-buttons .play {
+    background: var(--red-principal) !important;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+}
+
+.wrap-detail .wrap-info .wrap-buttons .follow {
+    color: var(--red-principal);
+    border: 1px solid #EB5757;
+    background: transparent;
+}
+
+.wrap-detail .wrap-info .wrap-buttons i {
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+
+/************** Responsive************/
+
+@media (max-width: 745px) {
+    .wrap-detail .wrap-image {
+        max-width: 0;
+    }
+}
+
+@media (max-width: 541px) {
+    .wrap-detail .wrap-info .description {
+        padding: 20px 0 20px 0;
+    }
+
+    .wrap-detail .wrap-info .wrap-buttons button {
+        margin-right: 9px;
+    }
+}
