@@ -1,7 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
-import { delay, map } from 'rxjs/operators';
+import { catchError, delay, map, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,7 @@ import { delay, map } from 'rxjs/operators';
 export class MusicService {
   private _httpClient = inject(HttpClient);
 
-  test(){
+  test() {
     // const url = '/api/search';
     // const params = new HttpParams()
     //   .set('q', 'eminem')
@@ -19,23 +19,10 @@ export class MusicService {
 
   searchSongs(query: string, type: 'album' | 'track'): Observable<any> {
 
-    const url = '/api/search';
+    const url = 'https://api.deezer.com/search';
     const params = new HttpParams()
-      .set('q', query)
-      .set('type', type);
+      .set('q', `${type}:'${query}'`);
     return this._httpClient.get<any>(url, { params });
-
-
-    // const params = new HttpParams().set('q', query).set('type', type);
-    // const url = 'https://api.deezer.com/search';
-    // return this._httpClient.get<any>(url, { params }).pipe(
-    //   map(response => {
-    // Manipular la respuesta si es necesario
-    //     return response.data;
-    //   })
-    // );
-
-
   }
 
 
